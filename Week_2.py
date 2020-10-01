@@ -307,27 +307,15 @@ print(mylist)
 #	Write a Python function primeproduct(m) that takes an integer m as input and returns 
 #	True if m is a prime product and False otherwise. (If m is not positive, your function should return False.)
 
-def isprime(m):   #Check if number is prime 
-    if m < 0:
-        return False		#	Rejecting Zero
-    if m == 2 or m == 1:
-        return True			#	Considering 1 and 2 as prime 
-    for i in range(2,m):
-        if m%i == 0:		#	Finding the number divisible by m
-            return False	#	Return False - Not Prime
-    return True				#	Return True - Prime
-
 def primeproduct(m):
-	plist = []	
-	for i in range (2,m):
-		if isprime(i) == True:	#	Generating a List of All prime Numbers of m
-			plist = plist +[i]
-#	Nested For Loop for Multiplying each value of the list with itself.
-	for i in plist:				
-		for j in plist:
-			if i*j == m:		#Finding a combination of prime number which give m
-				return True
-	return False
+    product=1
+    for i in range(2,(m//2)+1):		#we only want prime number which is a factor of "m"
+        if(m%i==0 and m>=0):		#to check whether "i" is a factor of m or not
+            product*=i
+    if(product==m):
+        return(True)			#like if u give input a 188. so factor of 188 r 2,4,47,94 and  when u divde 188 by 2 u will get 94. After than when u call function 
+    else:				#u will never get "product == m"
+        return(False)
 print(primeproduct(202))
 
 #	2)Write a function delchar(s,c) that takes as input strings s and c, where c has length 1 
