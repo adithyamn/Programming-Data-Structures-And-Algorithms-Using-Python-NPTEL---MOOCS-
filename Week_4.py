@@ -1,16 +1,16 @@
-					#############################
-					#####	NPTEL - COURSE	#####
-					#############################
+			#############################
+			#####	NPTEL - COURSE	#####
+			#############################
 
 #########################################################################
-#####	Programming, Data Structures and Algorithms Using Python	#####
+#####	Programming, Data Structures and Algorithms Using Python    #####
 #########################################################################
 
 ############################	WEEK 4	#################################
 
 # NOTES REMOVED
 
-#######################		WEEK 4 - QUIZ		##########################
+#######################	WEEK 4 - QUIZ	##########################
 """
 1) Consider the following Python function.
 def mystery(l):
@@ -136,4 +136,4 @@ def onehop(lst):
     return li
 
 y = onehop([(2,3),(1,2)])
-print(y)a
+print(y)
